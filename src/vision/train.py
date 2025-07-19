@@ -1,4 +1,10 @@
 from ultralytics import YOLO
+import kagglehub
+
+# Download latest version
+path = kagglehub.dataset_download("alistairking/recyclable-and-household-waste-classification")
+
+print("Path to dataset files:", path)
 
 # Load a model
 model = YOLO("yolo11n.yaml")  # build a new model from YAML
